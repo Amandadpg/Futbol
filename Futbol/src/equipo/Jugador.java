@@ -36,4 +36,6 @@ public abstract class Jugador {
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
+	
+	public abstract void mostrarDatos();
 }

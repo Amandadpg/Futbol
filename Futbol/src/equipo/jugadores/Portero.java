@@ -25,6 +25,14 @@ public class Portero extends Jugador{
 		return  "Portero [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "paradas=" + paradas + "]";
 	}
 	
-	
+	@Override
+	public void mostrarDatos() {
+		System.out.println("Datos del portero:");
+		System.out.println("Nombre: " + this.getNombre());
+        System.out.println("Dorsal: " + this.getDorsal());
+        System.out.println("Posición: portero" );
+        System.out.println("Estadistica concreta: paradas");
+        System.out.println("Paradas: " + this.getParadas());
+	}
 
 }

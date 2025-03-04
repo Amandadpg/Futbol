@@ -21,6 +21,18 @@ public class Central extends Defensa{
 	public String toString() {
 		return "Central [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "DisputasRealizadas= " + getDisputasRealizadas() + "entradas=" + entradas + "]";
 	}
+
+	@Override
+	public void mostrarDatos() {
+		System.out.println("Datos del central:");
+		System.out.println("Nombre: " + this.getNombre());
+        System.out.println("Dorsal: " + this.getDorsal());
+        System.out.println("Posición: central" );
+        System.out.println("Estadistica concreta: entradas");
+        System.out.println("Disputas realizadas: " + this.getDisputasRealizadas());
+        System.out.println("Entradas: " + this.entradas);
+		
+	}
 	
 	
 
