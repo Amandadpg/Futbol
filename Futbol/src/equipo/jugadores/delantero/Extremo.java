@@ -16,6 +16,11 @@ public class Extremo extends Delantero{
 	public void setPuesto(Puesto puesto) {
 		this.puesto = puesto;
 	}
+
+	@Override
+	public String toString() {
+		return "Extremo [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "goles= " + getGoles() + "puesto=" + puesto + "]";
+	}
 	
 	
 
