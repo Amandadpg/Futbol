@@ -32,5 +32,12 @@ public class DelanteroCentro extends Delantero{
         System.out.println("Goles: " + this.getGoles());
         System.out.println("Goles de penalti: " + this.golesDePenalti);
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        DelanteroCentro dc = (DelanteroCentro) obj;
+        return golesDePenalti == dc.golesDePenalti;
+    }
 
 }

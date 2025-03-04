@@ -32,5 +32,12 @@ public class Extremo extends Delantero{
         System.out.println("Goles: " + this.getGoles());
         System.out.println("Puesto: " + this.puesto);
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        Extremo extremo = (Extremo) obj;
+        return puesto.equals(extremo.puesto);
+    }
 
 }

@@ -32,5 +32,12 @@ public class Pivote extends Centrocampista{
         System.out.println("Pases completados: " + this.getPasesCompletados());
         System.out.println("Intercepciones: " + this.intercepciones);
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        Pivote pivote = (Pivote) obj;
+        return intercepciones == pivote.intercepciones;
+    }
 
 }

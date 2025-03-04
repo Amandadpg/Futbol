@@ -33,7 +33,12 @@ public class Mediapunta extends Centrocampista{
 		return "Mediapunta [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "pasesCompletados= " + getPasesCompletados() + "asistencias=" + asistencias + "]";
 	}
 	
-	
+	@Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        Mediapunta mediapunta = (Mediapunta) obj;
+        return asistencias == mediapunta.asistencias;
+    }
 	
 	
 }

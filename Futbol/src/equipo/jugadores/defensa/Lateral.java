@@ -33,5 +33,12 @@ public class Lateral extends Defensa{
         System.out.println("Puesto: " + this.puesto);
 		
 	}
+	
+	 @Override
+	    public boolean equals(Object obj) {
+	        if (!super.equals(obj)) return false;
+	        Lateral lateral = (Lateral) obj;
+	        return puesto.equals(lateral.puesto);
+	    }
 
 }

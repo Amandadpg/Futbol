@@ -34,5 +34,12 @@ public class Portero extends Jugador{
         System.out.println("Estadistica concreta: paradas");
         System.out.println("Paradas: " + this.getParadas());
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    if (!super.equals(obj)) return false; 
+	    Portero portero = (Portero) obj;
+	    return paradas == portero.paradas; 
+	}
 
 }
