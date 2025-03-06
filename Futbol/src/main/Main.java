@@ -1,13 +1,15 @@
 package main;
 
+import java.util.Scanner;
+
 import equipo.Equipo;
 import equipo.jugadores.Portero;
+import equipo.jugadores.defensa.Central;
 import equipo.jugadores.defensa.Lateral;
-import equipo.jugadores.defensa.Puesto;
-import equipo.jugadores.centrocampista.Mediapunta;
+import equipo.jugadores.defensa.PuestoDefensa;
 import equipo.jugadores.delantero.DelanteroCentro;
-
-import java.util.Scanner;
+import equipo.jugadores.delantero.Extremo;
+import equipo.jugadores.delantero.PuestoDelantero;
 
 public class Main {
 
@@ -61,10 +63,25 @@ public class Main {
 					scanner.nextLine();
 
 					if (tipoDefensa == 1) {
-						System.out.print("Introduce el número de disputas realizadas: ");
-						int disputas = scanner.nextInt();
+						System.out.println("Seleccione si el central es izquierdo o derecho:");
+						System.out.println("1. Izquierdo");
+						System.out.println("2. Derecho");
+						int ladoDefensa = scanner.nextInt();
 						scanner.nextLine();
-						equipo.añadirJugador(1, new Lateral(nombre, dorsal, equipoNombre, disputas, null));
+
+						if (ladoDefensa == 1) {
+							System.out.print("Introduce el número de disputas realizadas: ");
+							int disputasIzquierdo = scanner.nextInt();
+							scanner.nextLine();
+							equipo.añadirJugador(2,
+									new Central(nombre, dorsal, equipoNombre, disputasIzquierdo, PuestoDefensa.IZQUIERDO));
+						} else {
+							System.out.print("Introduce el número de disputas realizadas: ");
+							int disputasDerecho = scanner.nextInt();
+							scanner.nextLine();
+							equipo.añadirJugador(3,
+									new Central(nombre, dorsal, equipoNombre, disputasDerecho, PuestoDefensa.DERECHO));
+						}
 					} else if (tipoDefensa == 2) {
 						System.out.println("Seleccione si el lateral es izquierdo o derecho:");
 						System.out.println("1. Izquierdo");
@@ -77,21 +94,49 @@ public class Main {
 							int disputasIzquierdo = scanner.nextInt();
 							scanner.nextLine();
 							equipo.añadirJugador(2,
-									new Lateral(nombre, dorsal, equipoNombre, disputasIzquierdo, Puesto.IZQUIERDO));
+									new Lateral(nombre, dorsal, equipoNombre, disputasIzquierdo, PuestoDefensa.IZQUIERDO));
 						} else {
 							System.out.print("Introduce el número de disputas realizadas: ");
 							int disputasDerecho = scanner.nextInt();
 							scanner.nextLine();
 							equipo.añadirJugador(3,
-									new Lateral(nombre, dorsal, equipoNombre, disputasDerecho, Puesto.DERECHO));
+									new Lateral(nombre, dorsal, equipoNombre, disputasDerecho, PuestoDefensa.DERECHO));
 						}
 					}
 					break;
 				case 3:
-					System.out.print("Introduce el número de pases completados: ");
-					int pases = scanner.nextInt();
+					System.out.println("Seleccione si es extremo o delantero centro:");
+					System.out.println("1. Extremo");
+					System.out.println("2. Centro");
+					int tipoDelantero = scanner.nextInt();
 					scanner.nextLine();
-					equipo.añadirJugador(4, new Mediapunta(nombre, dorsal, equipoNombre, pases, 0));
+
+					if (tipoDelantero == 1) {
+						System.out.print("Introduce el número de goles anotados: ");
+						int goles = scanner.nextInt();
+						scanner.nextLine();
+						equipo.añadirJugador(1, new Extremo(nombre, dorsal, equipoNombre, goles, null));
+					} else if (tipoDelantero == 2) {
+						System.out.println("Seleccione si el extremo es izquierdo o derecho:");
+						System.out.println("1. Izquierdo");
+						System.out.println("2. Derecho");
+						int ladoDefensa = scanner.nextInt();
+						scanner.nextLine();
+
+						if (ladoDefensa == 1) {
+							System.out.print("Introduce el número de goles anotados: ");
+							int golesIzquierdo = scanner.nextInt();
+							scanner.nextLine();
+							equipo.añadirJugador(2,
+									new Extremo(nombre, dorsal, equipoNombre, golesIzquierdo, PuestoDelantero.IZQUIERDO));
+						} else {
+							System.out.print("Introduce el número de goles anotados: ");
+							int golesDerecho = scanner.nextInt();
+							scanner.nextLine();
+							equipo.añadirJugador(3,
+									new Extremo(nombre, dorsal, equipoNombre, golesDerecho, PuestoDelantero.DERECHO));
+						}
+					}
 					break;
 				case 4:
 					System.out.print("Introduce el número de goles: ");

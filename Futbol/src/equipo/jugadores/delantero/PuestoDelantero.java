@@ -1,6 +1,5 @@
 package equipo.jugadores.delantero;
 
-public enum Puesto {
-
+public enum PuestoDelantero {
 	IZQUIERDO, DERECHO
 }
