@@ -34,6 +34,7 @@ public class Main {
 
 			switch (opcion) {
 			case 1:
+				System.out.println();
 				System.out.println("Selecciona la posición del jugador:");
 				System.out.println("1. Portero");
 				System.out.println("2. Defensa");
@@ -74,13 +75,13 @@ public class Main {
 							int disputasIzquierdo = scanner.nextInt();
 							scanner.nextLine();
 							equipo.añadirJugador(2,
-									new Central(nombre, dorsal, equipoNombre, disputasIzquierdo, PuestoDefensa.IZQUIERDO));
+									new Central(nombre, dorsal, equipoNombre, disputasIzquierdo, tipoPosicion, PuestoDefensa.IZQUIERDO));
 						} else {
 							System.out.print("Introduce el número de disputas realizadas: ");
 							int disputasDerecho = scanner.nextInt();
 							scanner.nextLine();
 							equipo.añadirJugador(3,
-									new Central(nombre, dorsal, equipoNombre, disputasDerecho, PuestoDefensa.DERECHO));
+									new Central(nombre, dorsal, equipoNombre, disputasDerecho, tipoPosicion, PuestoDefensa.DERECHO));
 						}
 					} else if (tipoDefensa == 2) {
 						System.out.println("Seleccione si el lateral es izquierdo o derecho:");
