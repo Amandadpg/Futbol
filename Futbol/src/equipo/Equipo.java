@@ -1,35 +1,49 @@
 package equipo;
 
 public class Equipo {
-	private Jugador[] jugadores = new Jugador[11];
-	private String nombre;
+    private Jugador[] alineacion;
 
-	public void añadirJugador(int posicion, Jugador jugador) {
-		if (posicion < 0 || posicion >= jugadores.length) {
-			throw new IllegalArgumentException("Posición fuera de rango: " + posicion);
-		}
-		if (jugadores[posicion] != null) {
-			System.out.println("Advertencia: Reemplazando jugador en la posición " + posicion);
-		}
-		jugadores[posicion] = jugador;
-	}
+    public Equipo() {
+        alineacion = new Jugador[11];
+    }
 
-	public void mostrarAlineacion() {
-		for (int i = 0; i < jugadores.length; i++) {
-			if (jugadores[i] != null) {
-				System.out.println("Posición " + i + ": " + jugadores[i].getDorsal() + " - " + jugadores[i].getNombre());
-			} else {
-				System.out.println("Posición " + i + " vacía.");
-			}
-		}
-	}
+    public void añadirJugador(int posicion, Jugador jugador) {
+        if (posicion < 0 || posicion >= 11) {
+            throw new IllegalArgumentException("Posición inválida");
+        }
+        alineacion[posicion] = jugador;
+    }
 
-	public void setEquipo(String equipoNombre) {
-		this.nombre = equipoNombre;
+    public void mostrarAlineacion() throws Exception {
+        String[] posiciones = {
+            "Portero",
+            "Lateral izquierdo",
+            "Central 1",
+            "Central 2",
+            "Lateral derecho",
+            "Pivote 1",
+            "Pivote 2",
+            "Mediapunta",
+            "Extremo izquierdo",
+            "Extremo derecho",
+            "Delantero centro"
+        };
 
-	}
+        for (int i = 0; i < 11; i++) {
+            if (alineacion[i] == null) {
+                throw new Exception("Falta jugador en posición: " + i + " - " + posiciones[i]);
+            }
+        }
 
-	public Object getJugadores() {
-		return null;
-	}
+        System.out.println("\nALINEACIÓN:");
+        for (int i = 0; i < 11; i++) {
+            System.out.println(i + ": " + posiciones[i] + " - " + 
+                alineacion[i].getNombre() + " (" + alineacion[i].getDorsal() + ")");
+        }
+    }
+
+    public Jugador[] getAlineacion() {
+        return alineacion;
+    }
 }
+
