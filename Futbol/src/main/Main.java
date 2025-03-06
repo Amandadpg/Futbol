@@ -15,6 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Equipo equipo = null;
+		
 
 		while (true) {
 			System.out.println("\n--- MENÚ DE GESTIÓN DE EQUIPO ---");
