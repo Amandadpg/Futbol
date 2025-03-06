@@ -19,18 +19,22 @@ public class Lateral extends Defensa{
 
 	@Override
 	public String toString() {
-		return "Lateral [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "disputasRealizadas= " + getDisputasRealizadas() + "puesto=" + puesto + "]";
+		return "Lateral [nombre=" + getNombre() + 
+								"dorsal= " + getDorsal() + 
+								"equipo" + getEquipo() + 
+								"disputasRealizadas= " + getDisputasRealizadas() + 
+								"puesto=" + puesto + "]";
 	}
 	
 	@Override
 	public void mostrarDatos() {
-		System.out.println("Datos del lateral:");
-		System.out.println("Nombre: " + this.getNombre());
-        System.out.println("Dorsal: " + this.getDorsal());
-        System.out.println("Posición: lateral" );
-        System.out.println("Estadistica concreta: " + this.getPuesto());
-        System.out.println("Disputas realizadas: " + this.getDisputasRealizadas());
-        System.out.println("Puesto: " + this.puesto);
+		System.out.println("Datos del lateral:" +
+								"Nombre: " + this.getNombre() + 
+								"Dorsal: " + this.getDorsal() +
+								"Posición: lateral" +
+								"Estadistica concreta: " + this.getPuesto() +
+								"Disputas realizadas: " + this.getDisputasRealizadas() +
+								"Puesto: " + this.puesto);
 		
 	}
 	

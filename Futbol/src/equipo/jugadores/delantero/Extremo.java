@@ -19,18 +19,22 @@ public class Extremo extends Delantero{
 
 	@Override
 	public String toString() {
-		return "Extremo [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "goles= " + getGoles() + "puesto=" + puesto + "]";
+		return "Extremo [nombre=" + getNombre() + 
+							"dorsal= " + getDorsal() + 
+							"equipo" + getEquipo() + 
+							"goles= " + getGoles() + 
+							"puesto=" + puesto + "]";
 	}
 	
 	@Override
 	public void mostrarDatos() {
-		System.out.println("Datos del extremo:");
-		System.out.println("Nombre: " + this.getNombre());
-        System.out.println("Dorsal: " + this.getDorsal());
-        System.out.println("Posición: extremo" );
-        System.out.println("Estadistica concreta: " + this.getPuesto());
-        System.out.println("Goles: " + this.getGoles());
-        System.out.println("Puesto: " + this.puesto);
+		System.out.println("Datos del extremo:" + 
+								"Nombre: " + this.getNombre() +
+								"Dorsal: " + this.getDorsal() +
+								"Posición: extremo" +
+								"Estadistica concreta: " + this.getPuesto() +
+								"Goles: " + this.getGoles() +
+								"Puesto: " + this.puesto);
 	}
 	
 	@Override

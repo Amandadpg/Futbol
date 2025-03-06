@@ -1,6 +1,7 @@
 package main;
 
 import equipo.Equipo;
+import equipo.Jugador;
 import equipo.jugadores.Portero;
 import equipo.jugadores.defensa.Lateral;
 import equipo.jugadores.centrocampista.Mediapunta;
@@ -42,7 +43,7 @@ public class Main {
 				scanner.nextLine();
 				System.out.print("Introduce el nombre del equipo: ");
 				String equipoNombre = scanner.nextLine();
-
+				
 				switch (tipoPosicion) {
 				case 1:
 					System.out.print("Introduce el número de paradas: ");

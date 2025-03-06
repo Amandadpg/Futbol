@@ -16,8 +16,7 @@ public class Equipo {
 	public void mostrarAlineacion() {
 		for (int i = 0; i < jugadores.length; i++) {
 			if (jugadores[i] != null) {
-				System.out.println("Posición " + i + ":");
-				jugadores[i].mostrarDatos();
+				System.out.println("Posición " + i + ":" + jugadores[i].getDorsal() + " - " + jugadores[i].getNombre());
 			} else {
 				System.out.println("Posición " + i + " vacía.");
 			}

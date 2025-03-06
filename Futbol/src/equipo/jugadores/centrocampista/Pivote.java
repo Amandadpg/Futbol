@@ -19,18 +19,22 @@ public class Pivote extends Centrocampista{
 
 	@Override
 	public String toString() {
-		return "Pivote [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "pasesCompletados= " + getPasesCompletados() + "intercepciones=" + intercepciones + "]";
+		return "Pivote [nombre=" + getNombre() + 
+							"dorsal= " + getDorsal() + 
+							"equipo" + getEquipo() + 
+							"pasesCompletados= " + getPasesCompletados() + 
+							"intercepciones=" + intercepciones + "]";
 	}
 	
 	@Override
 	public void mostrarDatos() {
-		System.out.println("Datos del pivote:");
-		System.out.println("Nombre: " + this.getNombre());
-        System.out.println("Dorsal: " + this.getDorsal());
-        System.out.println("Posición: pivote" );
-        System.out.println("Estadistica concreta: intercepciones");
-        System.out.println("Pases completados: " + this.getPasesCompletados());
-        System.out.println("Intercepciones: " + this.intercepciones);
+		System.out.println("Datos del pivote:"+ 
+								"Nombre: " + this.getNombre() + 
+								"Dorsal: " + this.getDorsal() +
+								"Posición: pivote" + 
+								"Estadistica concreta: intercepciones" + 
+								"Pases completados: " + this.getPasesCompletados() + 
+								"Intercepciones: " + this.intercepciones);
 	}
 	
 	@Override

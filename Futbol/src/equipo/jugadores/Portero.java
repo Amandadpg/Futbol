@@ -22,17 +22,20 @@ public class Portero extends Jugador{
 
 	@Override
 	public String toString() {
-		return  "Portero [nombre=" + getNombre() + "dorsal= " + getDorsal() + "equipo" + getEquipo() + "paradas=" + paradas + "]";
+		return  "Portero [nombre=" + getNombre() + 
+								"dorsal= " + getDorsal() + 
+								"equipo" + getEquipo() + 
+								"paradas=" + paradas + "]";
 	}
 	
 	@Override
 	public void mostrarDatos() {
-		System.out.println("Datos del portero:");
-		System.out.println("Nombre: " + this.getNombre());
-        System.out.println("Dorsal: " + this.getDorsal());
-        System.out.println("Posición: portero" );
-        System.out.println("Estadistica concreta: paradas");
-        System.out.println("Paradas: " + this.getParadas());
+		System.out.println("Datos del portero:" + 
+								"Nombre: " + this.getNombre() + 
+								"Dorsal: " + this.getDorsal() + 
+								"Posición: portero" + 
+								"Estadistica concreta: paradas" + 
+								"Paradas: " + this.getParadas());
 	}
 	
 	@Override
