@@ -170,7 +170,6 @@ public class Main {
 
 			case 5:
 				System.out.println("Saliendo del programa...");
-				scanner.close();
 				return;
 
 			default:
