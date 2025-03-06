@@ -2,6 +2,7 @@ package equipo;
 
 public class Equipo {
 	private Jugador[] jugadores = new Jugador[11];
+	private String nombre;
 
 	public void añadirJugador(int posicion, Jugador jugador) {
 		if (posicion < 0 || posicion >= jugadores.length) {
@@ -21,5 +22,14 @@ public class Equipo {
 				System.out.println("Posición " + i + " vacía.");
 			}
 		}
+	}
+
+	public void setEquipo(String equipoNombre) {
+		this.nombre = equipoNombre;
+
+	}
+
+	public Object getJugadores() {
+		return null;
 	}
 }
